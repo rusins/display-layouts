@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""display-state: save and apply monitor layouts on GNOME Wayland (proof of concept)"""
+"""display-layouts: save and apply monitor layouts on GNOME Wayland (proof of concept)"""
 
 import subprocess
 
@@ -94,7 +94,7 @@ def describe_layout(layout):
 
 def main():
     presets = {}
-    print("display-state — type 'help' for commands")
+    print("display-layouts — type 'help' for commands")
 
     while True:
         try:

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-  <schema id="org.gnome.shell.extensions.display-state"
-          path="/org/gnome/shell/extensions/display-state/">
+  <schema id="org.gnome.shell.extensions.display-layouts"
+          path="/org/gnome/shell/extensions/display-layouts/">
     <key name="layouts" type="s">
       <default>'{}'</default>
       <summary>Saved display layouts</summary>

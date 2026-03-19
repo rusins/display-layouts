@@ -1,9 +1,9 @@
 {
-  "uuid": "display-state@raitis",
-  "name": "Display State",
+  "uuid": "display-layouts@rusins.github.com",
+  "name": "Display Layouts",
   "description": "Save and apply monitor layouts from the quick settings menu",
   "version": 1,
   "shell-version": ["45", "46", "47", "48", "49"],
-  "settings-schema": "org.gnome.shell.extensions.display-state",
+  "settings-schema": "org.gnome.shell.extensions.display-layouts",
   "url": ""
 }

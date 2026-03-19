@@ -24,8 +24,8 @@ function layoutToArgs(layout) {
     return args;
 }
 
-const DisplayStateToggle = GObject.registerClass(
-class DisplayStateToggle extends QuickMenuToggle {
+const DisplayLayoutsToggle = GObject.registerClass(
+class DisplayLayoutsToggle extends QuickMenuToggle {
     _init(settings) {
         super._init({
             title: 'Display Layout',
@@ -72,13 +72,13 @@ class DisplayStateToggle extends QuickMenuToggle {
                 try {
                     const [, , stderr] = p.communicate_utf8_finish(res);
                     if (!p.get_successful())
-                        Main.notifyError('Display State', stderr?.trim() || 'Failed to apply layout');
+                        Main.notifyError('Display Layouts', stderr?.trim() || 'Failed to apply layout');
                 } catch (e) {
-                    console.error('Display State:', e);
+                    console.error('Display Layouts:', e);
                 }
             });
         } catch (e) {
-            console.error('Display State:', e);
+            console.error('Display Layouts:', e);
         }
     }
 
@@ -88,11 +88,11 @@ class DisplayStateToggle extends QuickMenuToggle {
     }
 });
 
-const DisplayStateIndicator = GObject.registerClass(
-class DisplayStateIndicator extends SystemIndicator {
+const DisplayLayoutsIndicator = GObject.registerClass(
+class DisplayLayoutsIndicator extends SystemIndicator {
     _init(settings) {
         super._init();
-        this._toggle = new DisplayStateToggle(settings);
+        this._toggle = new DisplayLayoutsToggle(settings);
         this.quickSettingsItems.push(this._toggle);
     }
 
@@ -102,10 +102,10 @@ class DisplayStateIndicator extends SystemIndicator {
     }
 });
 
-export default class DisplayStateExtension extends Extension {
+export default class DisplayLayoutsExtension extends Extension {
     enable() {
         this._settings = this.getSettings();
-        this._indicator = new DisplayStateIndicator(this._settings);
+        this._indicator = new DisplayLayoutsIndicator(this._settings);
         Main.panel.statusArea.quickSettings.addExternalIndicator(this._indicator);
     }
 

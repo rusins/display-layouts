@@ -50,7 +50,7 @@ function captureCurrentLayout() {
     return layout;
 }
 
-export default class DisplayStatePreferences extends ExtensionPreferences {
+export default class DisplayLayoutsPreferences extends ExtensionPreferences {
     fillPreferencesWindow(window) {
         const settings = this.getSettings();
 
@@ -86,7 +86,7 @@ export default class DisplayStatePreferences extends ExtensionPreferences {
                 settings.set_string('layouts', JSON.stringify(layouts));
                 nameRow.text = '';
             } catch (e) {
-                console.error('Display State prefs:', e);
+                console.error('Display Layouts prefs:', e);
             }
         });
 
