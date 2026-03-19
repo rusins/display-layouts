@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.display-state"
+          path="/org/gnome/shell/extensions/display-state/">
+    <key name="layouts" type="s">
+      <default>'{}'</default>
+      <summary>Saved display layouts</summary>
+      <description>JSON object mapping layout names to monitor configuration arrays</description>
+    </key>
+  </schema>
+</schemalist>
