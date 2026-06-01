@@ -4,10 +4,11 @@ Save and apply monitor layouts from the GNOME quick settings menu.
 
 ## Requirements
 
-- GNOME Shell 45–49
+- GNOME Shell 45–50
 - [`gdctl`](https://gitlab.gnome.org/msandova/gdctl) — used to apply saved layouts
 
 Install `gdctl` before enabling the extension, otherwise applying layouts will fail.
+(`mutter` package on NixOS)
 
 ## Installation
 
